@@ -3,7 +3,7 @@ var http = require('http');
 var bodyParser = require('body-parser');
 
 var app = express();
-const PORT = 3000;
+const port = process.env.PORT || 3000;
 
 const echoRequests = [];
 
@@ -78,4 +78,4 @@ app.get('/', function (req, res) {
 });
 
 
-http.createServer(app).listen(PORT);
+http.createServer(app).listen(port);
